@@ -1,0 +1,11 @@
+import qrcode
+
+data = 'https://metanit.com/python/tkinter/2.8.php?ysclid=lmj79tb77o995060687'
+
+qr = qrcode.QRCode(version=5, box_size=15, border=10)
+
+qr.add_data(data)
+
+img = qr.make_image()
+
+img.save('QR CODE.png')
